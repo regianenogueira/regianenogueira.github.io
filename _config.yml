@@ -1,6 +1,6 @@
 # Site settings
-title: Regiane Nogueira
-description: '#Teste'
+title: Regiane Lopes
+#description: '#Teste'
 url: 'https://regianenogueira.github.io/'
 # baseurl: '/regianenogueira.github.io'
 # google_analytics: 'UA-XXXXXX-X'
@@ -8,13 +8,13 @@ url: 'https://regianenogueira.github.io/'
 # disable_landing_page: true
 
 author:
-  name: 'Regiane Nogueira'
+  name: 'Regiane Nogueira Lopes'
 #  email: josh@joshgerdes.com
 #  twitter_username: joshgerdes
 #  facebook_username: joshgerdes
   github_username:  regianenogueira
-  linkedin_username:  regiane-nogueira-a4059812
-  instagram: qaengineertools
+  linkedin_username:  regianenogueiralopes
+ # instagram: qaengineertools
   
   
   
