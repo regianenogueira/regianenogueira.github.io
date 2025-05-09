@@ -6,3 +6,4 @@ gem 'jekyll-watch'
 gem 'kramdown'
 gem 'kramdown-parser-gfm'
 gem 'github-pages', group: :jekyll_plugins
+gem "faraday-retry", "~> 2.3"

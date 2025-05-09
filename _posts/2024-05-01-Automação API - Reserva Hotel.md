@@ -1,8 +1,9 @@
 ---
 title:  "Testando com Rest Assured uma API Fake criada com Json Server dentro de um container Docker"
-date:   2024-05-15 15:04:23
+date:   2024-04-29 19:04:23
 categories: [Api]
 tags: [Automação API]
+image: /images/json-server.jpg
 ---
 
 Tech Stack: [Rest Assured] [JUnit] [Docker] [Fake JSON Server]

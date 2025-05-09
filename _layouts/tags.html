@@ -3,27 +3,56 @@ layout: default
 ---
 <h2>Tags:</h2>
 <div class="tags"> 
-{% for tagitem in site.tags  %} 
-  <a href="#{{ tagitem[0] }}">{{  tagitem[0] }}</a>
-{% endfor %}
+  {% for tagitem in site.tags  %} 
+    <a href="#{{ tagitem[0] }}" class="tag-link" data-tag="{{ tagitem[0] }}">{{ tagitem[0] }}</a>
+  {% endfor %}
 </div>
 
-<!-- iterate through all tags on the site --> 
-{% for tagitem in site.tags %} 
-  <!-- for each tag, create an anchor by using the tag name as an id --> 
-  <div id="{{ tagitem[0] }}">  
-    <h3> {{ tagitem[0] }} </h3>  <!-- for create a heading --> 
+<div class="tag-content">
+  <!-- iterate through all tags on the site --> 
+  {% for tagitem in site.tags %} 
+    <!-- for each tag, create an anchor by using the tag name as an id --> 
+    <div id="{{ tagitem[0] }}" class="tag-section">  
+      <h3>{{ tagitem[0] }}</h3>  <!-- create a heading --> 
 
-    <ul> <!-- create the list of posts -->
-      <!-- iterate through all the posts on the site --> 
-      {% for post in site.posts %} 
-        <!-- list only those which contain the current tag --> 
-        {% if post.tags contains tagitem[0] %} 
-            <li>
-              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-{% endfor %}
+      <ul> <!-- create the list of posts -->
+        <!-- iterate through all the posts on the site --> 
+        {% for post in site.posts %} 
+          <!-- list only those which contain the current tag --> 
+          {% if post.tags contains tagitem[0] %} 
+              <li>
+                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tagLinks = document.querySelectorAll(".tag-link");
+    const tagSections = document.querySelectorAll(".tag-section");
+
+    // Esconde todas as seções inicialmente
+    tagSections.forEach(section => section.style.display = "none");
+
+    // Adiciona evento de clique para cada link de tag
+    tagLinks.forEach(link => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        // Esconde todas as seções
+        tagSections.forEach(section => section.style.display = "none");
+
+        // Mostra apenas a seção correspondente à tag clicada
+        const tag = this.getAttribute("data-tag");
+        const targetSection = document.getElementById(tag);
+        if (targetSection) {
+          targetSection.style.display = "block";
+        }
+      });
+    });
+  });
+</script>
