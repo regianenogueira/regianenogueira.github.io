@@ -52,8 +52,8 @@ pre.highlight code,
 .user-image {
   margin-bottom: 1.2em;
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border: 3px solid #fff;
   border-radius:100%;
 }
@@ -64,4 +64,122 @@ pre.highlight code,
   height: auto;
   margin-bottom: 15px;
   border-radius: 8px;
+}
+
+/* Dark Theme */
+body {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
+}
+
+.content-wrapper {
+  background-color: #1a1a1a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #f0f0f0 !important;
+}
+
+p {
+  color: #d0d0d0;
+}
+
+a {
+  color: #ff6b57;
+}
+
+a:hover {
+  color: #ff8a7a;
+}
+
+blockquote {
+  background: #2a2a2a !important;
+  border: 1px solid #3a3a3a !important;
+  color: #d0d0d0;
+}
+
+code {
+  background: #2a2a2a !important;
+  border: 1px solid #3a3a3a !important;
+  color: #f0f0f0;
+}
+
+pre {
+  background: #2a2a2a !important;
+  border: 1px solid #3a3a3a !important;
+}
+
+.footer {
+  border-top: 2px solid #3a3a3a !important;
+  color: #888 !important;
+}
+
+.footer__copyright a {
+  color: #999 !important;
+}
+
+.post-meta {
+  color: #888 !important;
+}
+
+.date, .time, .author, .tags {
+  color: #888 !important;
+}
+
+.date a, .time a, .author a, .tags a {
+  color: #aaa !important;
+}
+
+.excerpt, .intro {
+  color: #aaa !important;
+}
+
+.post-list__post-title a {
+  color: #f0f0f0 !important;
+}
+
+.post-list__post-title a:hover {
+  color: #ff6b57 !important;
+}
+
+.post-list__meta {
+  color: #888 !important;
+}
+
+.post-list__divider,
+.section-title__divider {
+  border-top: 1px solid #3a3a3a !important;
+}
+
+.post-comments {
+  border-top: 1px solid #3a3a3a !important;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"] {
+  background: #2a2a2a !important;
+  border: 1px solid #3a3a3a !important;
+  color: #e0e0e0 !important;
+}
+
+table {
+  background: #2a2a2a;
+}
+
+th {
+  background: #333 !important;
+  color: #f0f0f0 !important;
+  border: 1px solid #444 !important;
+}
+
+td {
+  background: #2a2a2a !important;
+  color: #d0d0d0 !important;
+  border: 1px solid #3a3a3a !important;
+}
+
+.pagination__page-number {
+  color: #aaa !important;
 }
